@@ -1,0 +1,63 @@
+p1
+{
+    
+	font-size : 18px;
+}
+
+body
+{
+    background-image:"fond_ecran2.jpg";
+	font-size : 20px;
+}
+
+nav
+{
+    float: left;
+    width: 200px;
+    border: 3px solid black;
+	font-family: "Georgia";
+	background-color:rgb(216,233,201);
+}
+
+section
+{
+    margin-left: 220px;
+	float: left;
+    border: 3px solid black;
+	font-family: "Georgia";
+	background-color:rgb(251,254,186);
+	width: 1100px;
+	/*text-align: center;*/
+}
+
+aside
+{
+position: absolute;
+right: -600px;
+bottom: 350px;
+width: 1200px;
+/*margin-left: 700px;
+float: right; 
+position: relative;*/
+
+/*background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;*/
+  
+}
+
+
+/*width: 235px;*/
+
+
+
+article
+{
+	/*float: right;*/
+    margin-left: 1100px;
+	 width: 1200px;
+   /* border: 3px solid black;*/
+}
