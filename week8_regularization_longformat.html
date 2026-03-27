@@ -1417,40 +1417,33 @@ components to use is a hyper-parameter<br />
 </p>
 <p>Choose <span class="math inline">\(M\)</span> using
 cross-validation</p>
-</div>
-<div id="pcr-in-r" class="section level2">
-<h2>PCR in <code>R</code></h2>
-<p>In <code>R</code> use <code>plr()</code> in the <code>pls</code>
-package.</p>
-<p>See <code>R</code> code for a worked example.</p>
-<pre><code>pcr.fit &lt;- pcr(Salary ~ ., data=Hit,
-               scale=TRUE, 
-               subset=train, 
-               validation=&quot;CV&quot;,
-               segments=5)
-
-summary(pcr.fit)</code></pre>
-<p>Principal component regression with 5-fold CV and
-<code>ncomp=10</code></p>
-<pre><code>Data:   {\bf X} dimension: 263 19 
-       Y dimension: 263 1
-Fit method: svdpc
-Number of components considered: 10
-
-VALIDATION: RMSEP
-Cross-validated using 5 random segments.
-       (Intercept)  1 comps  2 comps  3 comps  4 comps  5 comps  6 comps  7 comps  8 comps  9 comps  10 comps
-CV             452    351.7    351.2    350.5    348.2    345.8    342.5    343.4    347.0    347.1     345.3
-adjCV          452    351.0    350.4    349.6    347.1    344.7    340.9    341.8    344.9    345.1     343.0
-
-TRAINING: % variance explained
-        1 comps  2 comps  3 comps  4 comps  5 comps  6 comps  7 comps  8 comps  9 comps  10 comps
-{\bf X}         38.31    60.16    70.84    79.03    84.29    88.63    92.26    94.96    96.28     97.26
-Salary    40.63    41.58    42.17    43.22    44.90    46.48    46.69    46.75    46.86     47.76</code></pre>
-<p>Validation plot with MSE (instead of RMSE)</p>
-<pre><code>validationplot(pcr.fit,val.type=&quot;MSEP&quot;,legendpos=&quot;topright&quot;)</code></pre>
-<p>Score plot for the first four principal components</p>
-<pre><code>scoreplot(pcr.fit, comps=1:4, cex=0.7)</code></pre>
+<!-- ## PCR in `R` -->
+<!-- In `R` use `plr()` in the `pls` package.  -->
+<!-- See `R` code for a worked example. -->
+<!--     pcr.fit <- pcr(Salary ~ ., data=Hit, -->
+<!--                    scale=TRUE,  -->
+<!--                    subset=train,  -->
+<!--                    validation="CV", -->
+<!--                    segments=5) -->
+<!--     summary(pcr.fit) -->
+<!-- Principal component regression with 5-fold CV and `ncomp=10` -->
+<!--     Data:   {\bf X} dimension: 263 19  -->
+<!--            Y dimension: 263 1 -->
+<!--     Fit method: svdpc -->
+<!--     Number of components considered: 10 -->
+<!--     VALIDATION: RMSEP -->
+<!--     Cross-validated using 5 random segments. -->
+<!--            (Intercept)  1 comps  2 comps  3 comps  4 comps  5 comps  6 comps  7 comps  8 comps  9 comps  10 comps -->
+<!--     CV             452    351.7    351.2    350.5    348.2    345.8    342.5    343.4    347.0    347.1     345.3 -->
+<!--     adjCV          452    351.0    350.4    349.6    347.1    344.7    340.9    341.8    344.9    345.1     343.0 -->
+<!--     TRAINING: % variance explained -->
+<!--             1 comps  2 comps  3 comps  4 comps  5 comps  6 comps  7 comps  8 comps  9 comps  10 comps -->
+<!--     {\bf X}         38.31    60.16    70.84    79.03    84.29    88.63    92.26    94.96    96.28     97.26 -->
+<!--     Salary    40.63    41.58    42.17    43.22    44.90    46.48    46.69    46.75    46.86     47.76 -->
+<!-- Validation plot with MSE (instead of RMSE) -->
+<!--     validationplot(pcr.fit,val.type="MSEP",legendpos="topright") -->
+<!-- Score plot for the first four principal components -->
+<!--     scoreplot(pcr.fit, comps=1:4, cex=0.7) -->
 </div>
 </div>
 
